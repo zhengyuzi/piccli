@@ -1,0 +1,54 @@
+{
+  "name": "piccli",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.30.3",
+  "description": "A CLI tool to process images with sharp",
+  "author": "yu <381740310@qq.com> (https://github.com/zhengyuzi)",
+  "license": "MIT",
+  "homepage": "https://github.com/zhengyuzi/piccli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhengyuzi/piccli"
+  },
+  "keywords": [
+    "sharp",
+    "image",
+    "cli"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./dist/cli.mjs",
+    "./package.json": "./package.json"
+  },
+  "bin": "./bin/index.mjs",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "cli": "esno src/cli.ts",
+    "build": "tsdown",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "citty": "^0.2.1",
+    "consola": "^3.4.2",
+    "fs-extra": "^11.3.4",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.7.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.5.0",
+    "eslint": "^10.1.0",
+    "esno": "^4.8.0",
+    "tsdown": "^0.21.4",
+    "typescript": "^6.0.2"
+  }
+}
