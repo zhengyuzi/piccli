@@ -1,0 +1,3 @@
+[submodule "vendor/sharp"]
+	path = vendor/sharp
+	url = https://github.com/lovell/sharp
