@@ -1,3 +1,13 @@
-import sharp from 'sharp'
+import type sharp from 'sharp'
 
-export const FORMATS = ['jpg', ...Object.keys(sharp.format)] as (keyof sharp.FormatEnum)[]
+export const FORMATS = [
+  'jpg',
+  'jpeg',
+  'png',
+  'webp',
+  'svg',
+  'gif',
+  'tiff',
+  'v',
+  'avif',
+] as (keyof sharp.FormatEnum)[]
