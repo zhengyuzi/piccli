@@ -1,7 +1,7 @@
 {
   "name": "piccli",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "packageManager": "pnpm@10.30.3",
   "description": "A CLI tool to process images with sharp",
   "author": "yu <381740310@qq.com> (https://github.com/zhengyuzi)",
