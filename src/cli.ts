@@ -23,13 +23,11 @@ const main = defineCommand({
     },
     width: {
       type: 'string',
-      alias: ['w'],
       description: 'Target width in pixels',
       required: false,
     },
     height: {
       type: 'string',
-      alias: ['h'],
       description: 'Target height in pixels',
       required: false,
     },
