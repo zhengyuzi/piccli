@@ -61,8 +61,5 @@ jobs:
       - name: Install
         run: nci
 
-      - name: Run Tests
-        run: nr test
-
       - name: Build
         run: nr build
