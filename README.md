@@ -41,3 +41,9 @@ npx piccli ./a.jpg,./b.png
 | `--quality` | `-q` | Image quality (1-100) | jpeg/webp: 80, png: 100, avif: 50 |
 | `--help` | `-h` | Show help | - |
 | `--version` | `-v` | Show version | - |
+
+## Skills
+
+```bash
+npx skills add https://github.com/zhengyuzi/piccli --skill piccli
+```
