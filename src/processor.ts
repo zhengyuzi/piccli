@@ -12,6 +12,16 @@ export interface ProcessOptions {
   outputDir?: string
 }
 
+function getOutputPath(
+  entry: string,
+  outputDir: string,
+  format?: string,
+): string {
+  const baseName = path.basename(entry, path.extname(entry))
+  const ext = format || path.extname(entry).slice(1)
+  return `${outputDir}/${baseName}.${ext}`
+}
+
 export async function processImage(
   entry: string,
   options: ProcessOptions = {},
@@ -25,21 +35,22 @@ export async function processImage(
     const {
       width = metadata.width,
       height = metadata.height,
-      format = metadata.format,
+      format,
       quality,
       outputDir = `${path.dirname(entry)}/output`,
     } = options
 
-    const baseName = path.basename(entry, path.extname(entry))
-
-    const outputPath = `${outputDir}/${baseName}.${format}`
+    const outputPath = getOutputPath(entry, outputDir, format)
 
     await fs.ensureDir(outputDir)
 
-    await image
-      .resize(Number(width), Number(height))
-      .toFormat(format, { quality })
-      .toFile(outputPath)
+    let pipeline = image.resize(Number(width), Number(height))
+
+    if (format) {
+      pipeline = pipeline.toFormat(format, { quality })
+    }
+
+    await pipeline.toFile(outputPath)
 
     consola.success(`Processed: ${entry} -> ${outputPath}`)
   }
