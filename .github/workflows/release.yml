@@ -33,8 +33,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
+      - name: Run Tests
+        run: pnpm test
+
       - name: PNPM build
-        run: pnpm run build
+        run: pnpm build
 
       - name: Publish to NPM
         run: pnpm -r publish --access public --no-git-checks
