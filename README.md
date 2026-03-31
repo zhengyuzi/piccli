@@ -15,7 +15,7 @@ npx piccli <input> [options]
 npx piccli ./photo.jpg
 
 # Resize and convert format
-npx piccli ./photo.jpg -w 800 -h 600 -f webp
+npx piccli ./photo.jpg --width 800 --height 600 -f webp
 
 # Specify output directory
 npx piccli ./photo.jpg -o ./dist
@@ -35,9 +35,9 @@ npx piccli ./a.jpg,./b.png
 | Flag | Alias | Description | Default |
 |------|-------|-------------|---------|
 | `--outputDir` | `-o` | Output directory | `<input>/output` |
-| `--width` | `-w` | Target width in pixels | Original |
-| `--height` | `-h` | Target height in pixels | Original |
-| `--format` | `-f` | Output format (jpeg/png/webp/avif/gif) | Original |
+| `--width` | - | Target width in pixels | Original |
+| `--height` | - | Target height in pixels | Original |
+| `--format` | `-f` | Output format | Original |
 | `--quality` | `-q` | Image quality (1-100) | jpeg/webp: 80, png: 100, avif: 50 |
 | `--help` | `-h` | Show help | - |
 | `--version` | `-v` | Show version | - |

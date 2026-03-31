@@ -2,6 +2,20 @@
 
 Piccli is a CLI tool to process images with [sharp](https://github.com/lovell/sharp).
 
+## Repository Structure
+```
+.
+├── src/                    # Source code
+│   ├── index.ts            # Entry point
+│   ├── cli.ts              # CLI entry point
+│   ├── config.ts           # Configuration file
+│   └── processor.ts        # Image processor
+├── skills/                 # Agent skills
+│   └── piccli/             # Piccli skill
+└── vendor/                 # Vendor code
+    └── sharp/              # sharp source code
+```
+
 ## Sharp Docs
 
 Refer to the [docs](./vendor/sharp/docs/src/content/docs) folder for more details.
