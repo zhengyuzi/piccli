@@ -21,18 +21,21 @@ npx piccli <input> [options]
 
 | Need | Command |
 |------|---------|
-| Compress image | `npx piccli ./photo.jpg -q 50` |
-| Convert to WebP | `npx piccli ./photo.jpg -f webp` |
-| Resize image | `npx piccli ./photo.jpg -w 800` |
-| Batch compress folder | `npx piccli ./images/ -q 70` |
-| Output to specific folder | `npx piccli ./photo.jpg -o ./dist` |
+| Compress image | `piccli ./photo.jpg -q 50` |
+| Convert to WebP | `piccli ./photo.jpg -f webp` |
+| Convert to AVIF | `piccli ./photo.jpg -f avif` |
+| Resize image | `piccli ./photo.jpg --width 800` |
+| Resize with height | `piccli ./photo.jpg --height 600` |
+| Resize and convert | `piccli ./photo.jpg --width 800 --format webp` |
+| Batch compress folder | `piccli ./images/ -q 70` |
+| Output to specific folder | `piccli ./photo.jpg -o ./dist` |
 
 ## Options
 
 | Flag | Alias | Description | Default |
 |------|-------|-------------|---------|
 | `--outputDir` | `-o` | Output directory | `<input>/output` |
-| `--width` | `-w` | Target width in pixels | Original |
-| `--height` | `-h` | Target height in pixels | Original |
-| `--format` | `-f` | Output format (jpeg/png/webp/avif/gif) | Original |
+| `--width` | | Target width in pixels | Original |
+| `--height` | | Target height in pixels | Original |
+| `--format` | `-f` | Output format (jpg/jpeg/png/webp/avif/gif/tiff/svg) | Original |
 | `--quality` | `-q` | Image quality (1-100) | jpeg/webp: 80, png: 100, avif: 50 |

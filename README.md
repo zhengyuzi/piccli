@@ -2,6 +2,12 @@
 
 A CLI tool to process images with [sharp](https://github.com/lovell/sharp).
 
+## Skills
+
+```bash
+npx skills add https://github.com/zhengyuzi/piccli --skill piccli
+```
+
 ## Usage
 
 ```bash
@@ -42,8 +48,3 @@ npx piccli ./a.jpg,./b.png
 | `--help` | `-h` | Show help | - |
 | `--version` | `-v` | Show version | - |
 
-## Skills
-
-```bash
-npx skills add https://github.com/zhengyuzi/piccli --skill piccli
-```
